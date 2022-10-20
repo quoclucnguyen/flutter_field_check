@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_field_check/pages/home_page.dart';
 import 'package:flutter_field_check/pages/login_page.dart';
+import 'package:flutter_field_check/pages/select_outlet_page.dart';
 import 'package:flutter_field_check/pages/select_project_page.dart';
 import 'package:go_router/go_router.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
   }
 
   final GoRouter _router = GoRouter(
-    initialLocation: '/select-project',
+    initialLocation: '/select-outlet',
     routes: <GoRoute>[
       GoRoute(
         path: '/',
@@ -56,6 +57,12 @@ class MyApp extends StatelessWidget {
         path: '/select-project',
         builder: (BuildContext context, GoRouterState state) {
           return const SelectProjectPage();
+        },
+      ),
+      GoRoute(
+        path: '/select-outlet',
+        builder: (BuildContext context, GoRouterState state) {
+          return const SelectOutletPage();
         },
       ),
     ],
